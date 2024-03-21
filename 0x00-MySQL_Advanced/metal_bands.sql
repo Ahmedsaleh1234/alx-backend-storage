@@ -17,7 +17,7 @@ CREATE TABLE `metal_bands` (
   `formed` year DEFAULT NULL,
   `origin` varchar(255) DEFAULT NULL,
   `split` year DEFAULT NULL,
-  `style` varchar(255) DEFAULT NULL,
+  `` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
