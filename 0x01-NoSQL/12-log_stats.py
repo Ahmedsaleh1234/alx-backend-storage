@@ -4,7 +4,7 @@
 from pymongo import MongoClient
 
 
-def main():
+def log_stats():
     """main"""
     client = MongoClient('mongodb://127.0.0.1:27017')
     mongo_collection = client.logs.nginx
@@ -26,4 +26,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    log_stats()
