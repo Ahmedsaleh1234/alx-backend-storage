@@ -2,7 +2,9 @@
 """ Log stats"""
 
 from pymongo import MongoClient
-if __name__ == '__main__':
+
+
+def main():
     client = MongoClient()
     mongo_collection = client.logs.nginx
     logs = mongo_collection.count_documents({})
@@ -20,3 +22,7 @@ if __name__ == '__main__':
     print(f"\tmethod PATCH: {patch}")
     print(f"\tmethod DELETE: {delete}")
     print(f"{path} status check")
+
+
+if __name__ == '__main__':
+    main()
