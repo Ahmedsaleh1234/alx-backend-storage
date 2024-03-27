@@ -26,7 +26,7 @@ class Cache:
         self._redis.set(key, data)
         return key
 
-    def get(self, key: str, fn: Optional[Callable]) -> Any:
+    def get(self, key: str, fn: Optional[Callable] = None) -> Any:
         """
         method that take a key string argument and
         an optional Callable argument named fn
