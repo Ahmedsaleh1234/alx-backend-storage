@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Writing strings to Redis"""
 import redis
-from typing import Union, Optional, Callable
+from typing import Union, Optional, Callable, Any
 from uuid import uuid4
 
 
@@ -26,7 +26,7 @@ class Cache:
         self._redis.set(key, data)
         return key
 
-    def get(self, key: str, fn: Optional[Callable]):
+    def get(self, key: str, fn: Optional[Callable]) -> Any:
         """
         method that take a key string argument and
         an optional Callable argument named fn
